@@ -1,6 +1,12 @@
 .tabs {
    display: flex;
-   flex-wrap: wrap; // make sure it wraps
+   flex-wrap: wrap;
+
+   label {
+      &:not(:last-of-type) {
+         margin-right: 30px;
+      }
+   }
 }
 .tabs label {
    order: 1; // Put the labels first
@@ -8,8 +14,10 @@
    padding: 1rem 2rem;
    margin-right: 0.2rem;
    cursor: pointer;
-   background: #90caf9;
-   font-weight: bold;
+   background: #fff;
+   border: 2px solid $blue;
+   color: $blue;
+   text-align: center;
    transition: background ease 0.2s;
 }
 .tabs .tab {
@@ -17,14 +25,14 @@
    flex-grow: 1;
    width: 100%;
    display: none;
-   padding: 1rem;
    background: #fff;
 }
 .tabs input[type='radio'] {
    display: none;
 }
 .tabs input[type='radio']:checked + label {
-   background: #fff;
+   background: $blue;
+   color: $text-light;
 }
 .tabs input[type='radio']:checked + label + .tab {
    display: block;
