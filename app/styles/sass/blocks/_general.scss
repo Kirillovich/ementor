@@ -1,0 +1,41 @@
+// GENERAL PROJECT STYLES
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: inherit;
+}
+
+body {
+   box-sizing: border-box;
+}
+
+img {
+   max-width: 100%;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+}
+
+ul li {
+   list-style-type: none;
+}
+
+.container {
+   max-width: 1200px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.section {
+   padding: 120px 0;
+}
+
+a[href="#menu"] {
+   display: none;
+   margin-right: 20px;
+}
+ 
