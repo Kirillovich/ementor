@@ -3,3 +3,43 @@
       display: block;
    }
 }
+
+@media (min-width: 600px) {
+   .nav {
+      ul {
+         li {
+            position: relative;
+   
+            &:hover {
+               & .nav__submenu {
+                  top: 40px;
+                  z-index: 2;
+                  opacity: 1;
+               }
+            }
+         }
+      }
+
+      &__submenu {
+         position: absolute;
+         left: -22px;
+         top: -260px;
+         z-index: -1;
+         padding: 18px 22px;
+         background: $text-light;
+         border-radius: 20px;
+         opacity: 0;
+
+         &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: calc(100% + 20px);
+            position: absolute;
+            left: 0;
+            top: -20px;
+            z-index: 1;
+         }
+      }
+   }
+}

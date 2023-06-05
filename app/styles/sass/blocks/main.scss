@@ -30,6 +30,20 @@
       align-items: center;
       justify-content: space-between;
       margin-top: 45px;
+      position: relative;
+
+      &__social {
+         display: flex;
+         flex-direction: column;
+         row-gap: 30px;
+         position: absolute;
+         top: 0;
+         left: 0;
+
+         img {
+            display: block;
+         }
+      }
 
       &__center {
          text-align: center;
@@ -71,8 +85,16 @@
 }
 
 .nav {
-   & ul ul {
-      display: none;
+   & > ul ul {
+      transition: opacity .2s;
+
+      li:not(:last-child) {
+         margin-bottom: 12px;
+      }
+      
+      a {
+         color: $textcolor;
+      }
    }
 
    &-flex {
@@ -83,6 +105,14 @@
    &__link {
       color: $text-light;
       text-decoration: none;
+      transition: all .25s;
+      position: relative;
+      z-index: 3;
+
+      &:hover {
+         transition: all .25s;
+         color: $orange;
+      }
    }
 }
 
