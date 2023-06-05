@@ -1,4 +1,33 @@
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+   .header {
+      &-top {
+         flex-wrap: wrap;
+
+         &__call {
+            margin-left: auto;
+         }
+      }
+
+      &-composition {
+         &__title {
+            font-size: 35px;
+            margin: 25px 0;
+         }
+
+         &__subtitle {
+            margin: 0 auto 35px;
+         }
+      }
+
+      &__nav {
+         width: 100%;
+         order: 3;
+         margin-top: 10px;
+      }
+   }
+}
+
+@media (max-width: 850px) {
    a[href="#menu"] {
       display: block;
    }
