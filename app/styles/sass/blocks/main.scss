@@ -81,6 +81,28 @@
          margin: 0 auto 50px;
          line-height: 1.5;
       }
+
+      &__down {
+         position: absolute;
+         right: 0;
+         bottom: 0;
+         display: flex;
+         align-items: center;
+         transform-origin: right top;
+         transform: rotate(-90deg) translateY(-90%) translateX(89%);
+
+         img {
+            display: inline-block;
+            transform: rotate(90deg);
+            margin-right: 15px;
+         }
+
+         span {
+            font-size: 14px;
+            font-weight: normal;
+            color: $text-light;
+         }
+      }
    }
 }
 
